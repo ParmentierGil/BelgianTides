@@ -8,12 +8,20 @@
 
 :root {
     /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
+    --global-color-alpha-light: #A3A0FB80;
+    --global-color-alpha: #A3A0FB;
 
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
+    --global-color-beta: #3B86FF;
+
+    --global-color-neutral-xxxx-light: #F0F0F7;
+    --global-color-neutral-xxx-light: #EBEBF2;
+    --global-color-neutral-xx-light: #D7DAE2;
+    --global-color-neutral-x-light: #BCBCCB;
+    --global-color-neutral-light: #A5A4BF;
+    --global-color-neutral: #808495;
+    --global-color-neutral-dark: #4D4F5C;
+    --global-color-neutral-x-dark: #43425D;
+    --global-color-neutral-xx-dark: #3B3B53;
 
     /* Shadows */
 
@@ -21,6 +29,14 @@
 
     /* transitions */
     --transition-alpha: .1s;
+
+    /* Whitespace */
+    --global-baseline: 5px;
+    --global-whitespace-xs: calc(var(--global-baseline) * 2);
+    --global-whitespace-sm: calc(var(--global-baseline) * 3);
+    --global-whitespace-md: calc(var(--global-baseline) * 4);
+    --global-whitespace-lg: calc(var(--global-baseline) * 5);
+    --global-whitespace-xl: calc(var(--global-baseline) * 6);
 }
 
 /*------------------------------------*\
@@ -34,14 +50,14 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
+    font-family: "source-sans-pro", Helvetica, arial, sans-serif;
+    color: var(--global-color-neutral-dark);
+    background-color: var(--global-color-neutral-xxxx-light);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
 }
 
 *,
@@ -177,7 +193,6 @@ a {
     outline-offset: 2px;
 }
 
-a:visited,
 a:active {
     color: var(--color-alpha);
 }
@@ -288,12 +303,6 @@ input::placeholder {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
-
-/*
-    Component: Logo
-    ---
-    Website main logo
-*/
 
 /*------------------------------------*\
 #UTILITIES

@@ -1,2 +1,2 @@
-# Create 3 Dashboard Design
-These are the startfiles for the labo about Dashboard Design.
+# Belgian Tides
+A simple web app to check to tides of the North Sea on the Belgian coast.
