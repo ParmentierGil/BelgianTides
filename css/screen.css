@@ -8,20 +8,18 @@
 
 :root {
     /* colors */
-    --global-color-alpha-light: #A3A0FB80;
-    --global-color-alpha: #A3A0FB;
+    --global-color-alpha-light: #D1FBF3;
+    --global-color-alpha: #9AC2BB;
 
-    --global-color-beta: #3B86FF;
-
-    --global-color-neutral-xxxx-light: #F0F0F7;
-    --global-color-neutral-xxx-light: #EBEBF2;
-    --global-color-neutral-xx-light: #D7DAE2;
-    --global-color-neutral-x-light: #BCBCCB;
-    --global-color-neutral-light: #A5A4BF;
-    --global-color-neutral: #808495;
-    --global-color-neutral-dark: #4D4F5C;
-    --global-color-neutral-x-dark: #43425D;
-    --global-color-neutral-xx-dark: #3B3B53;
+    --global-color-neutral-xxx-light: #FFFEFC;
+    --global-color-neutral-xx-light: #FFFAF5;
+    --global-color-neutral-x-light: #FFF7ED;
+    --global-color-neutral-light: #FFF3E6;
+    --global-color-neutral: #FFF0DF;
+    --global-color-neutral-dark: #B7A99A;
+    --global-color-neutral-x-dark: #685C4F;
+    --global-color-neutral-xx-dark: #474036;
+    --global-color-neutral-xxx-dark: #2B2621;
 
     /* Shadows */
 
@@ -31,12 +29,13 @@
     --transition-alpha: .1s;
 
     /* Whitespace */
-    --global-baseline: 5px;
+    --global-baseline: 8px;
     --global-whitespace-xs: calc(var(--global-baseline) * 2);
     --global-whitespace-sm: calc(var(--global-baseline) * 3);
     --global-whitespace-md: calc(var(--global-baseline) * 4);
     --global-whitespace-lg: calc(var(--global-baseline) * 5);
     --global-whitespace-xl: calc(var(--global-baseline) * 6);
+
 }
 
 /*------------------------------------*\
@@ -52,9 +51,9 @@
 html {
     font-size: 15px;
     line-height: 1.5;
-    font-family: "source-sans-pro", Helvetica, arial, sans-serif;
-    color: var(--global-color-neutral-dark);
-    background-color: var(--global-color-neutral-xxxx-light);
+    font-family: "Raleway", Helvetica, arial, sans-serif;
+    color: var(--global-color-neutral-xx-dark);
+    background-color: var(--global-color-neutral);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -303,6 +302,119 @@ input::placeholder {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
+
+.c-app {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    margin: var(--global-whitespace-xs) var(--global-whitespace-md);
+}
+
+.c-app__logo {
+    margin-bottom: 32px;
+}
+
+.c-logo__title {
+}
+
+.c-app__topbar {
+    
+}
+
+.c-app__main {
+    grid-column: span 2;
+}
+
+.c-tides {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.c-tides__cliff {
+    --sea-level-height: 20px;
+
+    position: relative;
+    width: 33%;
+}
+
+
+.c-tides__sea-level {
+    position: absolute;
+    background-color: var(--global-color-alpha);
+    height: var(--sea-level-height);
+    width: 100%;
+    opacity: 0.9;
+    top: calc(100% - var(--sea-level-height));
+    border-top: 1px dashed var(--global-color-neutral-xxx-dark);
+}
+
+.c-tides__wave {
+    background-color: transparent;
+    fill: var(--global-color-alpha);
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - var(--sea-level-height) - 32px);
+    left: 0;
+    opacity: 0.9;
+}
+
+.c-tides__info {
+    position: relative;
+    width: 400px;
+}
+
+.c-tides__info--actual {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.c-tides__actual {
+    display: flex;
+    position: absolute;
+    top: calc(100% - var(--sea-level-height) - 12px);
+}
+
+.c-tides__max {
+    position: absolute;
+    top: calc(100% - 200px - 13px);
+    display: flex;
+}
+
+.c-tides__line {
+    display: block;
+    border-top: 1px solid var(--global-color-neutral-xx-dark);
+    width: 32px;
+    height: 1px;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+
+.c-tides__line--actual {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.c-tides__neutral {
+    position: absolute;
+    top: 50%;
+    display: flex;
+}
+
+.c-tides__min {
+    position: absolute;
+    top: calc(100% - 13px);
+    display: flex;
+}
+
+.c-location {
+    text-align: center;
+}
+
+.c-location__text {
+    font-size: 22px;
+}
 
 /*------------------------------------*\
 #UTILITIES

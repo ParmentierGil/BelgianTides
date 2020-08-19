@@ -1,15 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Belgian Tides</title>
-        <meta name="description" content="This is my HTML5 boilerplate.">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Belgian Tides</title>
+    <meta name="description" content="This is my HTML5 boilerplate." />
 
-        <link rel="stylesheet" href="https://use.typekit.net/oij0mrt.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/screen.css">
-    </head>
-    <body>
-    </body>
+    <link rel="stylesheet" href="https://use.typekit.net/oij0mrt.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+
+    <script src="script/app.js"></script>
+    <script src="script/dataHandler.js"></script>
+  </head>
+  <body>
+    <div class="c-app">
+      <div class="c-app__logo">
+        <h1 class="c-logo__title">Belgian Tides</h1>
+      </div>
+      <div class="c-app__topbar"></div>
+      <div class="c-app__main">
+        <div class="c-tides">
+          <div class="c-tides__info c-tides__info--actual">
+            <div class="c-tides__actual">
+              <p class="c-tides__actual__text">
+                <span class="js-actual-value">1.64</span>m (Current Sea Level)
+              </p>
+              <span class="c-tides__line c-tides__line--actual"></span>
+            </div>
+          </div>
+          <div class="c-tides__cliff">
+            <img class="c-tides__img" src="img/cliff_png.png" />
+            <svg
+              class="c-tides__wave"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-50 0 2040.94 159"
+              width="100%"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M1670.27,210.75c-157.74-55.57-161.89-63.48-202.42-65.43-95.15-4.57-108,37.33-202.42,32.71-98.57-4.82-106.92-51.63-202.42-54.52-35.57-1.07-91.67,16.24-202.41,50.91-154.88,48.49-159.3,57-202.42,58.13-92.94,2.37-96.76-36.72-202.42-32.71-30.95,1.18-99.84,7.16-168.64,29.1-10.26,3.28-16.64,5.67-33.78,10.91-26.33,8.05-68.73,20.87-124,30.51A915.59,915.59,0,0,1,0,283.46H2040.94c-60.27,0-133.42-6.34-168.25-10.9C1830.67,267.06,1776.63,248.21,1670.27,210.75Z"
+                transform="translate(0 -123.46)"
+                style="fill: #9ac2bb;"
+              />
+            </svg>
+            <div class="c-tides__sea-level"></div>
+          </div>
+          <div class="c-tides__info">
+            <div class="c-tides__max">
+              <span class="c-tides__line"></span>
+              <p class="c-tides__max__text">
+                <span class="js-max-value">1.64</span>m (Highest Point Today)
+              </p>
+            </div>
+            <div class="c-tides__neutral">
+              <span class="c-tides__line"></span>
+              <p class="c-tides__neutral__text">0m (Neutral Sea Level)</p>
+            </div>
+            <div class="c-tides__min">
+              <span class="c-tides__line"></span>
+              <p class="c-tides__min__text">
+                <span class="js-min-value">-1.64</span>m (Lowest Point Today)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="c-location">
+            <h4 class="c-location__text">Oostende, Belgium</h4>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
