@@ -374,6 +374,12 @@ button:hover {
     }
 }
 
+@media (min-width: 1600px) {
+    .c-app__logo {
+        margin-bottom: 0px;
+    }
+}
+
 .c-app__main {
     margin: 0 auto;
     width: 90%;
@@ -604,6 +610,12 @@ button:hover {
     }
 }
 
+@media (min-width: 1600px) {
+    .c-tides {
+        width: 35%;
+    }
+}
+
 .c-location {
     text-align: center;
 }
@@ -820,6 +832,24 @@ a:hover {
     .c-button {
         font-size: 16px;
         padding: 8px 16px; 
+    }
+}
+
+@media (min-width: 1600px) {
+    .c-mockup {
+        flex-basis: 75%;
+        height: 75%;
+        margin-right: 0
+    }
+
+    .c-mockup__img {
+        margin-left: 10%;
+        width: 85%;
+        height: 85%;
+    }
+
+    .c-button.c-call-to-action {
+        margin-top: -64px;
     }
 }
 
