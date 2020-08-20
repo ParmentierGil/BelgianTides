@@ -835,7 +835,7 @@ a:hover {
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
     .c-mockup {
         flex-basis: 75%;
         height: 75%;
