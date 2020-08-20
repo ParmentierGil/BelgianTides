@@ -843,13 +843,18 @@ a:hover {
     }
 
     .c-mockup__img {
-        margin-left: 10%;
-        width: 85%;
-        height: 85%;
+        margin-left: 15%;
+        width: 80%;
+        height: 100%;
     }
 
     .c-button.c-call-to-action {
-        margin-top: -64px;
+        margin-top: -32px;
+    }
+
+    .c-info {
+        margin-top: 64px;
+        margin-bottom: 64px;
     }
 }
 
